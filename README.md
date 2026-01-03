@@ -66,14 +66,14 @@ Each project in this repository represents a **complete SOC scenario**, from att
 
 ## Repository Structure
 Cassandra-SOC-Lab/
-│
+│└── README.md
 ├── SOC-BruteForce-Detection/        
 │
 ├── SOC-Endpoint-Threat-Detection/  
 │
 ├── SOC-Lateral-Movement/           
-│
-└── README.md
+
+
 
 
 
