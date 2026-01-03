@@ -20,9 +20,6 @@ Each project in this repository represents a **complete SOC scenario**, from att
 
 ---
 
-# Cassandra-SOC-Lab 🛡️
-
-This repository contains my hands-on SOC and Blue Team projects. Each folder represents a complete lab environment focused on threat detection, log analysis, and incident response.
 
 ## 🏗️ Lab Architecture
 - **Host OS:** Ubuntu 24.04
