@@ -1,2 +1,88 @@
 # Cassandra-SOC-Lab-
-This repository contains my hands-on SOC and Blue Team projects. Each folder represents a complete lab with detection, analysis, and incident response.
+
+## About Me
+I am Kack Bayiha Cassandra, I am focused on **SOC operations, Blue Team defense, and incident response**.  
+This repository showcases hands-on security projects built in a realistic lab environment to develop practical skills in monitoring, detection, analysis, and response.
+
+My goal is to grow into a **SOC Analyst / Blue Team role**, with strong foundations in SIEM, log analysis, and security incident handling.
+
+---
+
+## Objective
+The main objective of this portfolio is to demonstrate:
+- Practical experience with **SIEM tools** , **XDR** , **EDR**
+- Detection of real-world attacks
+- Log analysis across Windows and Linux systems
+- Incident response methodology (detect, analyze, contain, recover)
+- Understanding of **MITRE ATT&CK** techniques
+
+Each project in this repository represents a **complete SOC scenario**, from attack simulation to response and lessons learned.
+
+---
+
+# Cassandra-SOC-Lab 🛡️
+
+This repository contains my hands-on SOC and Blue Team projects. Each folder represents a complete lab environment focused on threat detection, log analysis, and incident response.
+
+## 🏗️ Lab Architecture
+- **Host OS:** Ubuntu 24.04
+- **Virtualization:** VirtualBox
+- **SIEM:** Wazuh (Indexer, Manager, Dashboard)
+- **Endpoints:** Windows 11 (Victim), Kali Linux (Attacker)
+- **Network:** Isolated Internal Network
+
+---
+
+## 🚀 Projects Overview
+
+### 🥇 Project 1: Brute Force Detection & Incident Response
+- **Objective:** Detect and respond to RDP (Windows) and SSH (Linux) authentication attacks.
+- **Tools:** Wazuh, Hydra, Windows Event Logs (Event 4625).
+- **MITRE ATT&CK:** [T1110 - Brute Force](https://attack.mitre.org/techniques/T1110/)
+
+### 🥈 Project 2: Malware & Suspicious Activity Detection
+- **Objective:** Monitor endpoint behavior for process injection and malicious scripts.
+- **Tools:** Sysmon, Windows Event Logs, Wazuh custom rules.
+- **MITRE ATT&CK:** [T1059 - Command and Scripting Interpreter](https://attack.mitre.org/techniques/T1059/)
+
+### 🥉 Project 3: Lateral Movement & Privilege Abuse
+- **Objective:** Identify post-exploitation techniques such as SMB access and privilege escalation.
+- **Tools:** Wazuh correlation rules, Security logs.
+- **MITRE ATT&CK:** [T1021 - Remote Services](https://attack.mitre.org/techniques/T1021/)
+
+---
+
+## 🛠️ Security Tools Mentioned
+- **Wazuh:** SIEM & XDR platform.
+- **Sysmon:** Advanced system monitoring.
+- **Kali Linux:** Penetration testing platform.
+- **MITRE ATT&CK:** Framework for categorizing cyber attacks.
+## Lab Environment
+- **SIEM:** Wazuh
+- **Attacker:** Kali Linux
+- **Victims:** Windows 11, Ubuntu Server
+- **Network:** Internal lab network and briedge adapter for ubuntu server
+- **Techniques:** Brute Force, Log Analysis, Incident Response
+
+
+---
+
+## Repository Structure
+Cassandra-SOC-Lab/
+│
+├── SOC-BruteForce-Detection/        
+│
+├── SOC-Endpoint-Threat-Detection/  
+│
+├── SOC-Lateral-Movement/           
+│
+└── README.md
+
+
+
+
+---
+
+## Author
+Kack Bayiha Cassandra  
+Cybersecurity | SOC | Blue Team
