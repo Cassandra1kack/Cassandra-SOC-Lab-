@@ -10,9 +10,9 @@ My goal is to grow into a **SOC Analyst / Blue Team role**, with strong foundati
 
 ## Objective
 The main objective of this portfolio is to demonstrate:
-- Practical experience with **SIEM tools** , **XDR** , **EDR**
+- Practical experience with **SIEM tools** 
 - Detection of real-world attacks
-- Log analysis across Windows and Linux systems
+- Log analysis across Windows 
 - Incident response methodology (detect, analyze, contain, recover)
 - Understanding of **MITRE ATT&CK** techniques
 
@@ -33,7 +33,7 @@ Each project in this repository represents a **complete SOC scenario**, from att
 ## 🚀 Projects Overview
 
 ### 🥇 Project 1: Brute Force Detection & Incident Response
-- **Objective:** Detect and respond to RDP (Windows) and SSH (Linux) authentication attacks.
+- **Objective:** Detect and respond to RDP (Windows) 
 - **Tools:** Wazuh, Hydra, Windows Event Logs (Event 4625).
 - **MITRE ATT&CK:** [T1110 - Brute Force](https://attack.mitre.org/techniques/T1110/)
 
@@ -57,8 +57,8 @@ Each project in this repository represents a **complete SOC scenario**, from att
 ## Lab Environment
 - **SIEM:** Wazuh
 - **Attacker:** Kali Linux
-- **Victims:** Windows 11, Ubuntu Server
-- **Network:** Internal lab network and briedge adapter for ubuntu server
+- **Victims:** Windows 11
+- **Network:** Internal lab network 
 - **Techniques:** Brute Force, Log Analysis, Incident Response
 
 
