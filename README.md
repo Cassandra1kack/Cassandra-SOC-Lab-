@@ -1,8 +1,8 @@
 # Cassandra-SOC-Lab-
 
 ## About Me
-I am Kack Bayiha Cassandra, I am focused on **SOC operations, Blue Team defense, and incident response**.  
-This repository showcases hands-on security projects built in a realistic lab environment to develop practical skills in monitoring, detection, analysis, and response.
+I am Kack Bayiha Cassandra, I am focused on **SOC operations, Blue Team defense, and incident analysis**.  
+This repository showcases hands-on security projects built in a realistic lab environment to develop practical skills in monitoring, detection, and analysis.
 
 My goal is to grow into a **SOC Analyst / Blue Team role**, with strong foundations in SIEM, log analysis, and security incident handling.
 
@@ -13,10 +13,10 @@ The main objective of this portfolio is to demonstrate:
 - Practical experience with **SIEM tools** 
 - Detection of real-world attacks
 - Log analysis across Windows 
-- Incident response methodology (detect, analyze, contain, recover)
+- Incident analysis methodology (detect, analyze )
 - Understanding of **MITRE ATT&CK** techniques
 
-Each project in this repository represents a **complete SOC scenario**, from attack simulation to response and lessons learned.
+Each project in this repository represents a **complete SOC scenario**, from attack simulation to deep analyse and lessons learned.
 
 ---
 
@@ -32,8 +32,8 @@ Each project in this repository represents a **complete SOC scenario**, from att
 
 ## 🚀 Projects Overview
 
-### 🥇 Project 1: Brute Force Detection & Incident Response
-- **Objective:** Detect and respond to RDP (Windows) 
+### 🥇 Project 1: Brute Force Detection 
+- **Objective:** Detect and analysis to RDP (Windows) 
 - **Tools:** Wazuh, Hydra, Windows Event Logs (Event 4625).
 - **MITRE ATT&CK:** [T1110 - Brute Force](https://attack.mitre.org/techniques/T1110/)
 
