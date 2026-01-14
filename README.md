@@ -1,10 +1,10 @@
 # Cassandra-SOC-Lab-
 
 ## About Me
-I am Kack Bayiha Cassandra, I am focused on **SOC operations, Blue Team defense, and incident analysis**.  
+I am Kack Bayiha Cassandra, I am focused on **SOC operations, Blue Team defense,  incident analysis,and SOC incident Report**.  
 This repository showcases hands-on security projects built in a realistic lab environment to develop practical skills in monitoring, detection, and analysis.
 
-My goal is to grow into a **SOC Analyst / Blue Team role**, with strong foundations in SIEM, log analysis, and security incident handling.
+My goal is to grow into a **SOC Analyst / Blue Team role**, with strong foundations in SIEM, log analysis, and security incident reporting.
 
 ---
 
@@ -16,7 +16,7 @@ The main objective of this portfolio is to demonstrate:
 - Incident analysis methodology (detect, analyze )
 - Understanding of **MITRE ATT&CK** techniques
 
-Each project in this repository represents a **complete SOC scenario**, from attack simulation to deep analyse and lessons learned.
+Each project in this repository represents a **complete SOC l1 scenario**, from attack simulation to deep analyse , incident Report and lessons learned.
 
 ---
 
@@ -33,7 +33,7 @@ Each project in this repository represents a **complete SOC scenario**, from att
 ## 🚀 Projects Overview
 
 ### 🥇 Project 1: Brute Force Detection 
-- **Objective:** Detect and analysis to RDP (Windows) 
+- **Objective:** Detect and analysis 
 - **Tools:** Wazuh, Hydra, Windows Event Logs (Event 4625).
 - **MITRE ATT&CK:** [T1110 - Brute Force](https://attack.mitre.org/techniques/T1110/)
 
@@ -59,7 +59,7 @@ Each project in this repository represents a **complete SOC scenario**, from att
 - **Attacker:** Kali Linux
 - **Victims:** Windows 11
 - **Network:** Internal lab network 
-- **Techniques:** Brute Force, Log Analysis, Incident Response
+- **Techniques:** Brute Force, Log Analysis, incident report
 
 
 ---
@@ -68,11 +68,11 @@ Each project in this repository represents a **complete SOC scenario**, from att
 Cassandra-SOC-Lab/
 │└── README.md
 |
-├── SOC-BruteForce-Detection/        
+├── SOC-BruteForce-Detection/screenshop/report        
 │
-├── SOC-Endpoint-Threat-Detection/  
+├── SOC-Endpoint-Threat-Detection/ screenshop/report
 │
-├── SOC-Lateral-Movement/           
+├── SOC-Lateral-Movement/screenshop/report          
 
 
 
