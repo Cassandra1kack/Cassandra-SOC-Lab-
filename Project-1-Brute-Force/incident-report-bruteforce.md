@@ -1,5 +1,8 @@
-## SOC Incident Report — Brute Force Attempt (Detected & Blocked)##
-#1. Incident Overview
+## SOC Incident Report — Brute Force Attempt (Detected & Blocked)
+
+Analyst : Kack B. Cassandra
+
+## 1. Incident Overview
 
 Incident Type: Brute Force Authentication Attempt
 
