@@ -1,8 +1,8 @@
 ## project 1
-# SOC Brute Force Detection & Incident Response 
+# SOC Brute Force Detection and correlation
 
 ## Overview
-This project demonstrates the detection and response to brute-force attacks targeting
+This project demonstrates the detection correlation and analyse to brute-force attacks targeting
 Windows  using Wazuh SIEM.
 
 ## Lab Architecture
@@ -13,20 +13,17 @@ Windows  using Wazuh SIEM.
 
 ## Attack Simulation
 - RDP brute-force attack against Windows (Event ID 4625)
-- port scan with Nmap
-
+  
 ## Detection & Analysis
 - Log correlation with Wazuh
 - MITRE ATT&CK technique: T1110 – Brute Force
 - Alert triage and timeline creation
 
-## Incident Response
-- IP blocking
-- Account protection
-- Post-incident review
+## Incident report
+
 
 ## Tools & Technologies
 Wazuh | Windows 11 | Ubuntu | Kali Linux | Hydra | MITRE ATT&CK
 
 ## Author
-Cassandra
+Kack B. Cassandra
