@@ -1,9 +1,23 @@
-## project 1
-# SOC Brute Force Detection and correlation
+##Wazuh-Based Detection Projects
 
-## Overview
-This project demonstrates the detection correlation and analyse to brute-force attacks targeting
-Windows  using Wazuh SIEM.
+##1. Brute Force Detection
+
+    Objective: Detect authentication brute force attempts.
+    Tools: Wazuh, Hydra, Windows Event ID 4625
+    MITRE ATT&CK: T1110 – Brute Force
+
+##2. Endpoint Threat Detection
+
+    Objective: Monitor suspicious processes and malicious scripts.
+    Tools: Sysmon, Windows Event Logs, Wazuh custom rules
+    MITRE ATT&CK: T1059 – Command and Scripting Interpreter
+
+##3. Lateral Movement & Privilege Abuse
+
+    Objective: Detect SMB abuse and privilege escalation attempts.
+    Tools: Wazuh correlation rules, Windows Security logs
+    MITRE ATT&CK: T1021 – Remote Services
+
 
 ## Lab Architecture
 - Kali Linux (Attacker)
