@@ -43,7 +43,7 @@ Each project represents a complete SOC scenario from attack simulation to docume
 
 # Projects Overview
 
-## [Wazuh-Based Detection Projects](Cassandra-SOC-Lab-/Wazuh-Based-Detection-Projects)
+## [Wazuh-Based Detection Projects](Wazuh-Based-Detection-Projects)
 
 ### 1. Brute Force Detection
 
