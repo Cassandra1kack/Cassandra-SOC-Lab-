@@ -28,8 +28,6 @@ This lab demonstrates:
 * Mapping detections to MITRE ATT&CK techniques
 
 Each project represents a complete SOC scenario from attack simulation to documented incident report.
-<img width="1920" height="1040" alt="Image collée" src="https://github.com/user-attachments/assets/d221d7b8-7b1a-466c-8309-0cfa317f3a8d" />
-
 
 ---
 
@@ -40,6 +38,7 @@ Each project represents a complete SOC scenario from attack simulation to docume
 **SIEM Platforms:** Wazuh & Splunk
 **Endpoints:** Windows 11 (Victim), Kali Linux (Attacker)
 **Network:** Isolated internal lab network
+
 
 ---
 
