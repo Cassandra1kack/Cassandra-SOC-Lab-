@@ -1,6 +1,6 @@
 # SOC Investigation Project: Phishing → LoLBins → RDP → Data Exfiltration
 
-## 📌 Overview
+##  Overview
 
 This project simulates a real-world SOC investigation using Windows logs analyzed in Splunk.
 
@@ -16,7 +16,7 @@ The objective is to detect and analyze a full attack chain including:
 
 ---
 
-## 🛠️ Tools
+##  Tools
 
 - Splunk
 - Windows Event Logs is [here](dataset/windows_logs.csv)
