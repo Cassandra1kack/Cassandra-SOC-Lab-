@@ -1,6 +1,6 @@
 # SOC Investigation Project: RDP Brute Force & Lateral Movement
 
-## 📌 Overview
+##  Overview
 
 This project demonstrates a real-world SOC investigation scenario using Windows logs analyzed in Splunk.
 
@@ -14,14 +14,15 @@ The objective was to detect, analyze, and understand a security incident involvi
 
 ---
 
-## 🛠️ Tools Used
+##  Tools Used
 
 * Splunk
-* Windows Event Logs
+* Windows Event Logs here👉️
+  
 
 ---
 
-## 🎯 Objectives
+##  Objectives
 
 * Identify suspicious authentication activity
 * Detect brute force patterns
@@ -31,24 +32,12 @@ The objective was to detect, analyze, and understand a security incident involvi
 
 ---
 
-## 📁 Project Struc
 
-```
-├── dataset/
-│   └── windows_soc_training_logs.csv
-├── queries/
-│   └── splunk_queries.txt
-├── screenshots/
-│   └── (investigation evidence)
-└── README.md
-```
 
----
 
-## 🚨 Scenario Summary
+##  Scenario Summary
 
-An attacker performed multiple failed login attempts against a Windows system, followed by a successful login.
-
+The attack originated from IP 45.77.22.91 targeting the administrator account via RDP.
 Post-compromise activity included:
 
 * Command execution
@@ -59,66 +48,88 @@ Post-compromise activity included:
 
 ---
 
-## 🔍  Investigation Areas
+##   Investigation Areas
 
 ### 1. Brute Force Detection
-
-I begin by identify repeated failed login attempts (Event ID 4625).
+I begin by identifying the user/IP with the highest number of failed login attempts.
+```splunk
+index = windows  EventCode=4625 | top src_ip
+```
+<img width="1917" height="877" alt="Capture d’écran du 2026-03-21 22-06-14" src="https://github.com/user-attachments/assets/bb720c08-252d-4fca-905c-7450b92e2b7d" />
+Detect FAILED authentication (Event ID 4625) after failures
+45.77.22.91 who generates the most 4625
 
 ### 2. Successful Login Correlation
+Now I want to know which IP address successfully connected after the failed attempts.
+```splunk
+index=windows (EventCode=4625 OR EventCode=4624) src_ip!=10.*
+| stats count by _time, user ,src_ip,EventCode
+```
 
-Detect successful authentication (Event ID 4624) after failures.
+<img width="1912" height="1031" alt="Image collée" src="https://github.com/user-attachments/assets/ee0b0fda-9dd0-4da3-8bcc-22a7124c8320" />
 
-### 3. Process Execution
 
-Analyze suspicious processes such as:
+I detected a successful authentication (event ID 4624) after failures with the user administrator..
+Classic signature of successful brute force.
 
-* cmd.exe
-* powershell.exe
+### 3.Activity after login
+What does the attacker do after logging in?
+```splunk
+index=windows src_ip="45.77.22.91"
+| table _time EventCode user process command_line
+| sort _time
+```
+<img width="1917" height="902" alt="image" src="https://github.com/user-attachments/assets/49c65818-c78d-4df4-b6d5-de6c8087d04a" />
+m
 
-### 4. Persistence Mechanisms
+### 4. Persistence Mechanisms And  Privilege Escalation
 
-Detect creation of new users (Event ID 4720).
+Is the attacker adding or creating new users?
+```splunk
+index=windows (EventCode=4720 OR EventCode=4732)
+| table _time , user, command_line, process
+```
+<img width="1917" height="902" alt="image" src="https://github.com/user-attachments/assets/16852fe6-5dda-49b4-a591-bfd93874bae6" />
+user  backupadmin added(Event ID 4720)
+> net user backupadmin Password123 /add
 
-### 5. Privilege Escalation
+user  backupadmin added to privileged groups (Event ID 4732) 
+> net localgroup administrators backupadmin /add	
 
-Identify users added to privileged groups (Event ID 4732).
 
 ### 6. Defense Evasion
-
-Detect log clearing activity (Event ID 1102).
+```splunk
+index=windows EventCode=1102
+```
+<img width="1917" height="669" alt="Capture d’écran du 2026-03-21 21-15-46" src="https://github.com/user-attachments/assets/5b4960b9-8302-487f-bd99-cb0bdf9fbc87" />
+This is one of the most critical indicators.
+This indicates the attacker is attempting to evade detection and hinder investigation.
 
 ### 7. Lateral Movement
+ I observe remote execution using tools like PsExec.
+```splunk
+source="windows__logs.csv" host="cassandra-HP-EliteBook-850-G6" 45.77.22.91
+| stats count by _time , user ,command_line ,extracted_host
+```
+<img width="1917" height="889" alt="image" src="https://github.com/user-attachments/assets/bde68bcc-75ce-4bbb-8131-3b096d1e67db" />
 
 Observe remote execution using tools like PsExec.
+The attacker  moved laterally to WIN-WS02 using PsExec
+
+---
+##  Incident Summary
+
+The investigation identified a successful RDP brute force attack originating from IP 45.77.22.91 targeting the administrator account.
+
+Following initial access on WIN-APP01, the attacker executed commands, created a new privileged user (backupadmin), and established persistence.
+
+The attacker then moved laterally to WIN-WS02 using PsExec and cleared system logs (Event ID 1102) to evade detection.
+
+This indicates a full system compromise with privilege escalation and defense evasion.
 
 ---
 
-## 📸 Investigation Screenshots
-
-### 🔍 Brute Force Activity
-
-### 🔐 Successful Login
-
-### ⚙️ Suspicious Process Execution
-
-### 👤 User Creation (Persistence)
-
-### 🚨 Log Clearing (Defense Evasion)
-
----
-
-## 📊 Splunk Queries
-
-All queries used during the investigation are available in:
-
-```
-queries/splunk_queries.txt
-```
-
----
-
-## 📁 Dataset
+##  Dataset
 
 The dataset used for this investigation is located in:
 
@@ -128,15 +139,15 @@ dataset/windows_soc_training_logs.csv
 
 ---
 
-## 📄 Detailed Report
+##  Detailed Report
 
 A full incident report with detailed analysis, timeline, and conclusions is available here:
 
-👉 (Add link to your second README or report file)
+ (Splunk-Use-Cases/Windows-Security-Logs/README (Copie).md)
 
 ---
 
-## 🧠 Skills Demonstrated
+##  Skills Demonstrated
 
 * Log analysis
 * Threat detection
@@ -147,16 +158,8 @@ A full incident report with detailed analysis, timeline, and conclusions is avai
 
 ---
 
-## 🚀 Future Improvements
-
-* Add MITRE ATT&CK mapping
-* Integrate Sysmon logs
-* Expand dataset with malware scenarios
-* Create detection rules
-
 ---
 
 ## 📌 Author
 
-SOC Analyst (Junior) – Focused on Threat Detection & Incident Response
-
+SOC Analyst (Junior) – Focused on Threat Detection 
