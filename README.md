@@ -71,6 +71,8 @@ Each project represents a complete SOC scenario from attack simulation to docume
 ---
 
 # Splunk Log Analysis Projects
+### W. [WINDOWS log analysis](Splunk-Use-Cases/Windows-Security-Logs/README.md)
+ . [INVESTIGATION](Splunk-Use-Cases/Windows-Security-Logs/README.md)
 
 ### 4. DNS Log Analysis
 
