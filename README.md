@@ -81,7 +81,7 @@ Each project represents a complete SOC scenario from attack simulation to docume
 . Lateral movement
 . Log clearing
 
- #### PHYSHING analysis
+ #### [PHYSHING analysis](Splunk-Use-Cases/Windows-Security-Logs/phishingREADME.md)
   Objectif is to detect or identify:
   
 - Phishing (malicious document)
@@ -161,28 +161,6 @@ Each project represents a complete SOC scenario from attack simulation to docume
 
 ---
 
-# Repository Structure
-
-Cassandra-SOC-Lab/
-
-├── 01-Lab-Architecture/
-├── 02-Wazuh-Projects/
-│   ├── SOC-BruteForce-Detection/
-│   ├── SOC-Endpoint-Threat-Detection/
-│   └── SOC-Lateral-Movement/
-│
-├── 03-Splunk-Projects/
-│   ├── DNS-Log-Analysis/
-│   ├── HTTP-Log-Analysis/
-│   ├── SSH-Log-Analysis/
-│   ├── FTP-Log-Analysis/
-│   ├── SMTP-Log-Analysis/
-│   ├── DHCP-Log-Analysis/
-│   └── Tunnel-Detection/
-│
-├── 04-Wireshark-Analysis/
-│
-└── README.md
 
 ---
 
