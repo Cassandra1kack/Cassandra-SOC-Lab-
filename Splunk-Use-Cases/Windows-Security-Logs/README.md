@@ -127,13 +127,7 @@ This indicates a full system compromise with privilege escalation and defense ev
 
 ---
 
-##  Dataset
 
-The dataset used for this investigation is located in:
-
-```
-dataset/windows_soc_training_logs.csv
-```
 
 ---
 
