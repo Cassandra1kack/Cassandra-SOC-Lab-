@@ -1,4 +1,4 @@
-# Cassandra SOC Lab
+![KACK Bayiha Cassandra - Aspiring SOC Analyst](https://capsule-render.vercel.app/api?type=waving&color=39ff14&height=200&section=header&text=KACK%20Bayiha%20Cassandra-Aspiring%20SOC%20Analyst%20%7C%20Threat%20Detection%20%7C%20Log%20Analysis%20%7C%20Splunk&fontSize=25&fontColor=ffffff)
 
 ## About Me
 
