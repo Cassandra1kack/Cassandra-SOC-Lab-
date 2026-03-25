@@ -3,9 +3,7 @@
   <img src="https://readme-typing-svg.herokuapp.com?font=Fira+Code&weight=700&size=22&pause=1000&color=39FF14&center=true&vCenter=true&width=900&lines=Junior+SOC+Analyst;Incident+investigation+methodology+%7C+Blue+Team;Threat+Detection+%26+Log+Analysis;splunk+%7C+wazuh+%7C+Traffic+Analysis" alt="Typing SVG" />
 </p>
 
-## 👤 About Me
-My name is **Kack Bayiha Cassandra**, an aspiring SOC Analyst. My expertise focuses on Blue Team operations, intrusion detection, SIEM log analysis, and structured incident reporting.
-
+## 
 This repository showcases hands-on security projects built in a realistic lab environment to master the full incident lifecycle: **Detection → Analysis → • → Reporting.**
 
 ---
@@ -14,7 +12,9 @@ This repository showcases hands-on security projects built in a realistic lab en
 ## 🏗️ Lab Architecture
 
 To ensure high-fidelity analysis, I have implemented an isolated enterprise-grade infrastructure:
-u
+
+| Category | Tools |
+| :--- | :--- |
 | **Host OS:**| Ubuntu 24.04 LTS (VirtualBox).|
 | **SIEM/XDR Platforms:**| Wazuh (Manager & Dashboard) & Splunk Enterprise.|
 | **Endpoints:**| Windows 11 (Hardened with **Sysmon**) & Kali Linux (Attacker).|
@@ -103,10 +103,6 @@ Detection Focus on :
 
 ---
 
-## 📂 Repository Structure
-* `/Projects`: Detailed folders for each simulation (Logs, Screenshots, Write-ups).
-* `/Configs`: Custom configuration files (Wazuh Rules, Sysmon XML).
-* `/Reports`: Formal incident reports in PDF format.
 
 ---
 **linkedin:** [www.linkedin.com/in/cassandra-k-1b323433b] 
