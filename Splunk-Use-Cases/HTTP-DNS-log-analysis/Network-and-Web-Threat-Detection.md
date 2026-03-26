@@ -180,8 +180,9 @@ index=your_index sourcetype=http_logs
 
 ### >> 6. Suspicious User-Agent Detection
 
-Quels outils sont utilisés ?
-Pourquoi c’est suspect ?
+What tools are used?
+Why is that suspicious?
+
 
 **Query:**
 
@@ -301,4 +302,4 @@ The investigation was triggered by an alert indicating unusually large outbound 
 
 ## 📌 Author
 
-Cassandra – SOC Analyst Trainee
+Cassandra – SOC Analyst junior
