@@ -293,6 +293,12 @@ Multiple internal systems appear compromised, indicating a potential coordinated
 The investigation was triggered by an alert indicating unusually large outbound HTTP data transfers from an internal host.
 ---
 
+## Lessons Learned
+
+>> DNS logs are critical for detecting covert channels
+>>> Correlation between DNS and HTTP logs improves detection accuracy
+>>>> Early detection can prevent data exfiltration
+
 ## 🛠 Tools Used
 
 * Splunk
